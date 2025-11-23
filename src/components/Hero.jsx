@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="h-screen px-6 flex items-center mt-48" id="home">
+    <section className="h-screen px-6 flex items-center mt-48 sm:mt-1" id="home">
       <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-10">
 
         {/* LEFT TEXT */}
@@ -12,7 +12,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-5xl font-bold"
+            className="text-3xl sm:text-5xl font-bold"
           >
             Hi, I’m <span className="text-blue-400">Vainu Wamankar</span>
           </motion.h1>
@@ -23,7 +23,7 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="text-xl mt-4 max-w-xl"
           >
-            Frontend Developer | React | Tailwind | Modern UI Builder
+            Frontend Developer | UI/UX Developer | Frontend Engineer | Web Developer   
           </motion.p>
 
           <motion.div
@@ -36,7 +36,7 @@ export default function Hero() {
               Hire Me
             </a>
 
-            <a href="/resume.pdf" className="px-6 py-3 border border-white rounded-lg">
+            <a href="/vainu-wamnkar.pdf" className="px-6 py-3 border border-white rounded-lg">
               Download Resume
             </a>
           </motion.div>
@@ -50,9 +50,9 @@ export default function Hero() {
           className="flex-1 flex justify-center"
         >
           <img
-            src="/vainu-image.jpg"
+            src="/ritik.jpg"
             alt="Profile"
-            className="w-72 h-96 object-cover rounded-2xl shadow-xl"
+            className="w-80 h-72 object-cover rounded-xl shadow-xl"
           />
         </motion.div>
 

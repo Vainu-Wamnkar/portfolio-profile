@@ -43,7 +43,7 @@ export default function App() {
       {showWelcome ? (
         // ------------------ LETTER BY LETTER SCREEN ------------------
         <div className="h-screen flex items-center justify-center bg-black text-white">
-          <h1 className="text-5xl font-bold tracking-wide fade-scale">
+          <h1 className="text-3xl sm:text-5xl font-bold tracking-wide fade-scale">
             {displayedText}
           </h1>
 

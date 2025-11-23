@@ -19,7 +19,7 @@ export default function Footer() {
         {/* Social Links */}
         <div className="flex justify-center gap-8 mt-6 text-3xl">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/vainu-wamankar-7a3b39312/"
             target="_blank"
             className="hover:text-blue-500 transition-transform hover:scale-110"
           >
@@ -27,7 +27,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/mr_ritik_wamnkar09?igsh=MTZmdnJ0YjVobjFidQ%3D%3D&utm_source=qr"
             target="_blank"
             className="hover:text-pink-500 transition-transform hover:scale-110"
           >
@@ -35,7 +35,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://github.com"
+            href="http://github.com/Vainu-Wamnkar"
             target="_blank"
             className="hover:text-gray-400 transition-transform hover:scale-110"
           >
