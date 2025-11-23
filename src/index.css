@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.typing-text {
+  width: 0ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  animation: typing 3s steps(30) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 28ch; /* text ki length ke hisaab se adjust karna */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
