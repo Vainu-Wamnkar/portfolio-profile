@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="h-screen px-6 flex items-center mt-48 sm:mt-1" id="home">
+    <section className="h-screen px-6 flex items-center mt-20 sm:mt-1" id="home">
       <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-10">
 
         {/* LEFT TEXT */}
