@@ -1,6 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from "react-icons/fa";
-
+import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope,FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-blue-950 text-gray-300 py-10 px-6">
@@ -16,12 +15,21 @@ export default function Footer() {
           wamnkarr@gmail.com
         </a>
 
+
         {/* Social Links */}
         <div className="flex justify-center gap-8 mt-6 text-3xl">
           <a
+            href="https://wa.me/917240943384"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-500 text-4xl"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
             href="https://www.linkedin.com/in/vainu-wamankar-7a3b39312/"
             target="_blank"
-            className="hover:text-blue-500 transition-transform hover:scale-110"
+            className="text-blue-500 transition-transform hover:scale-110"
           >
             <FaLinkedin />
           </a>
@@ -29,7 +37,7 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/mr_ritik_wamnkar09?igsh=MTZmdnJ0YjVobjFidQ%3D%3D&utm_source=qr"
             target="_blank"
-            className="hover:text-pink-500 transition-transform hover:scale-110"
+            className="text-pink-500 transition-transform hover:scale-110"
           >
             <FaInstagram />
           </a>
@@ -37,7 +45,7 @@ export default function Footer() {
           <a
             href="http://github.com/Vainu-Wamnkar"
             target="_blank"
-            className="hover:text-gray-400 transition-transform hover:scale-110"
+            className="text-gray-400 transition-transform hover:scale-110"
           >
             <FaGithub />
           </a>
