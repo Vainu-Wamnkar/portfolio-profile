@@ -32,11 +32,9 @@ export default function Hero() {
             transition={{ delay: 1 }}
             className="mt-6 space-x-4"
           >
-            <a href="#contact" className="px-6 py-3 bg-blue-600 rounded-lg">
-              Hire Me
-            </a>
 
-            <a href="/vainu-wamnkar.pdf" className="px-6 py-3 border border-white rounded-lg">
+
+            <a href="/vainu-wamnkar.pdf" className="px-6 py-3 border border-white rounded-lg hover:bg-gray-700">
               Download Resume
             </a>
           </motion.div>

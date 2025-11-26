@@ -17,7 +17,7 @@ import ProtectedRoute from "./components/ProtectedRoute"; // NEW
 
 export default function App() {
   const [showWelcome, setShowWelcome] = useState(true);
-  const welcomeText = `Welcome To My ${location.pathname==="/"?"MyProfile":"Admin"}`;
+  const welcomeText = `Welcome To  ${location.pathname==="/"?"MyProfile":"Admin"}`;
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
