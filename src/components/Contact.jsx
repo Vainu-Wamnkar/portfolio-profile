@@ -19,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/contact/send", formData);
+      const res = await axios.post("https://portfolio-backend-a4on.onrender.com/api/contact/send", formData);
 
       alert("Message sent successfully!");
 

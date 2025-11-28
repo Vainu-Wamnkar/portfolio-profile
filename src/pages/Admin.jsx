@@ -11,7 +11,7 @@ export default function Admin() {
       const token = localStorage.getItem("adminToken");
 
       const response = await axios.get(
-        "http://localhost:5000/api/contact/all"
+        "https://portfolio-backend-a4on.onrender.com/api/contact/all"
       );
 
       setQueries(response.data.data);
@@ -27,7 +27,7 @@ export default function Admin() {
     if (!yes) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/contact/delete/${id}`);
+      await axios.delete(`https://portfolio-backend-a4on.onrender.com/api/contact/delete/${id}`);
       fetchQueries(); // refresh list
     } catch (err) {
       console.log("Error deleting query:", err);
