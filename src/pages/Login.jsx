@@ -17,7 +17,7 @@ export default function Login() {
         password,
       });
 
-      // localStorage.setItem("adminToken", response.data.token);
+      localStorage.setItem("adminToken", response.data.token);
       navigate("/admin");
     } catch (err) {
       setError("Invalid email or password");

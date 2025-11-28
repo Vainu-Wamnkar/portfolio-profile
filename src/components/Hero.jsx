@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="h-auto mt-10 px-6 flex items-center " id="home">
-      <div className="max-w-5xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-10">
+    <section className="h-auto mt-10 px-6 flex items-center" id="home">
+      <div className="max-w-5xl mx-auto w-full flex flex-col-reverse md:flex-row items-center justify-center gap-10">
 
         {/* LEFT TEXT */}
         <div className="flex-1 text-center md:text-left">
@@ -12,7 +12,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-3xl sm:text-5xl font-bold"
+            className="text-3xl sm:text-5xl font-bold mt-6"
           >
             Hi, I’m <span className="text-blue-400">Vainu Wamankar</span>
           </motion.h1>
@@ -32,15 +32,13 @@ export default function Hero() {
             transition={{ delay: 1 }}
             className="mt-6 space-x-4"
           >
-
-
             <a href="/vainu-wamnkar.pdf" className="px-6 py-3 border border-white rounded-lg hover:bg-gray-700">
               Download Resume
             </a>
           </motion.div>
         </div>
 
-        {/* RIGHT IMAGE */}
+        {/* LEFT IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -48,9 +46,9 @@ export default function Hero() {
           className="flex-1 flex justify-center"
         >
           <img
-            src="/ritik.jpg"
+            src="/ritikwamnkar.jpg"
             alt="Profile"
-            className="w-80 h-72 object-cover rounded-xl shadow-xl"
+            className="w-80 h-96 object-cover rounded-lg shadow-xl"
           />
         </motion.div>
 

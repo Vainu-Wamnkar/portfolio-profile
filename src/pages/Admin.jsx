@@ -8,7 +8,7 @@ export default function Admin() {
 
   const fetchQueries = async () => {
     try {
-      // const token = localStorage.getItem("adminToken");
+      const token = localStorage.getItem("adminToken");
 
       const response = await axios.get(
         "http://localhost:5000/api/contact/all"
@@ -21,12 +21,26 @@ export default function Admin() {
     }
   };
 
+  // DELETE QUERY FUNCTION
+  const deleteQuery = async (id) => {
+    const yes = window.confirm("Are you sure you want to delete this message?");
+    if (!yes) return;
+
+    try {
+      await axios.delete(`http://localhost:5000/api/contact/delete/${id}`);
+      fetchQueries(); // refresh list
+    } catch (err) {
+      console.log("Error deleting query:", err);
+      alert("Error deleting item");
+    }
+  };
+
   useEffect(() => {
     fetchQueries();
   }, []);
 
   const logout = () => {
-    // localStorage.removeItem("adminToken");
+    localStorage.removeItem("adminToken");
     navigate("/admin-login");
   };
 
@@ -53,6 +67,7 @@ export default function Admin() {
               <th className="p-3">Email</th>
               <th className="p-3">Message</th>
               <th className="p-3">Date</th>
+              <th className="p-3 text-center">Action</th>
             </tr>
           </thead>
 
@@ -66,11 +81,19 @@ export default function Admin() {
                   <td className="p-3">
                     {new Date(q.createdAt).toLocaleString()}
                   </td>
+                  <td className="p-3 text-center">
+                    <button
+                      onClick={() => deleteQuery(q._id)}
+                      className="px-3 py-1 bg-red-500 rounded hover:bg-red-600"
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               ))
             ) : (
               <tr>
-                <td colSpan="4" className="text-center py-4 text-gray-400">
+                <td colSpan="5" className="text-center py-4 text-gray-400">
                   No Queries Found
                 </td>
               </tr>

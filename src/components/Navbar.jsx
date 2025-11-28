@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { HiMenu, HiX } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navItems = ["home", "about", "skills", "projects", "internships", "contact", "education"];
+  const navigate = useNavigate();
+
+  //Secret page code
+  useEffect(() => {
+    const handleKey = (e) => {
+      if (e.shiftKey && e.key === "A") {
+        navigate("/admin-login");
+      }
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
+
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-gray-800/80 backdrop-blur-md shadow z-50">
